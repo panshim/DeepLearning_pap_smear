@@ -1,0 +1,30 @@
+--################### Download datasets ###################--
+Overlapping Cervical Cytology Image Segmentation Challenge - ISBI 2014: 	https://cs.adelaide.edu.au/~carneiro/isbi14_challenge/
+HPA Dataset: 																https://www.kaggle.com/c/human-protein-atlas-image-classification
+Neuclei Dataset: 															https://www.kaggle.com/c/data-science-bowl-2018/overview
+Neuro Dataset: 																http://neurofinder.codeneuro.org/
+
+Note: you may need to create .hdf5 files, inorder to train our neural networks. The way to create .hdf5 are provided in 'ImageSegmentation.ipynb'.
+
+
+--###################How to run these code?###################--
+Step1: Preparation
+	-- Put file folder 'ImageSegmentation' into drive and mount in colab
+	-- I shared 3 datasets on google drive: 'OverlappingCervicalImage', 'NucleiDataset', 'HPADataset'. Put them 	under the 'Segmentation folder'. They are too large so I didn't upload them onto bitbucket.
+	-- Open 'ImageSegmentation.ipynb' and you will see several 'Sections'
+	-- Execute all the cells in 'Section1'
+	-- If you want to make new dataset in hdf5 format, then execute 'Section 2', othereise skip it.
+		(Nuclei dataset is provided as data_360.hdf5)
+		(HPA dataset is provided as data.hdf5, but maybe you can't open such a big file in colab)
+
+Step2: Training
+	-- If you want to obtain new neural network models, run 'Section 3' with your configuration.(several models has been trained and provided, 
+	in directory: "./ImageSegmentation/saved_model_pth/" You can use them in application directly)
+
+Step3: Testing
+	-- For now, I've been using the same training dataset as testing dataset. See and run 'Section 5'
+
+Step4: Application
+	-- 'Section 5': Generate Augmented PNG images for Pap Smear classification
+	-- 'Section 6': Overlapping Cervical Cytology Segmentation Challenge image visualization
+
