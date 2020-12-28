@@ -1,4 +1,4 @@
-# ComputerGraphics_basics
+# DeepLearning_pap_smear
 
 ## 1. Overview
 **Background**: Pap smears are a method of screening for abnormal cervical cells. However, these tests are difficult to analyze as there are multiple cells per pap smear. This results in a long waiting period of 1-3 weeks for test results. 
