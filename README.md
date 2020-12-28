@@ -37,6 +37,7 @@ In the second step, we focused on classification of individual cells into 5 diff
 |      Batch normalization      |     Batch normalization      |
 |          Max-pooling          |         Max-pooling          |
 |               /               |        Dropout layers        |
+
 In addition to accuracy, we also wanted to explore whether or not a **simpler model** could perform nearly as well. As a baseline, we settled for an accuracy of approximately 85%, a bit lower than what we were able to achieve with ResNet. The baseline model we used consisted of 14 convolutional layers with 7x7 filters, 3 max pooling layers, and 1 average pooling layer. It contains a total of 202,754 neurons, and each convolutional layer contains 49C2 parameters where C represents the number of channels.
 ![net2](markdown/net2.png)
 
@@ -63,6 +64,8 @@ In addition to accuracy, we also wanted to explore whether or not a **simpler mo
 | Truncated model with 3x3 filters and dropout |   85%    |
 * **Table3: Ablation Study Feature**
 ---
+* **Result Picture**
+
 ![result](markdown/result.png)
 
 ## 4. Discussion
