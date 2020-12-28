@@ -1,5 +1,18 @@
 # DeepLearning_pap_smear
 
+- [DeepLearning_pap_smear](#deeplearning_pap_smear)
+  - [1. Overview](#1-overview)
+  - [2. Method](#2-method)
+    - [2.1 Cell Segmentation Methods](#21-cell-segmentation-methods)
+    - [2.2 Cell Classification Methods](#22-cell-classification-methods)
+      - [2.2.1 Different DNN Models](#221-different-dnn-models)
+      - [2.2.2 Model Simplification](#222-model-simplification)
+  - [3. Result](#3-result)
+  - [4. Discussion](#4-discussion)
+    - [4.1 Cell Segmentation Discussion](#41-cell-segmentation-discussion)
+    - [4.2 Cell Classification Discussion](#42-cell-classification-discussion)
+  - [5. References](#5-references)
+
 ## 1. Overview
 **Background**: Pap smears are a method of screening for abnormal cervical cells. However, these tests are difficult to analyze as there are multiple cells per pap smear. This results in a long waiting period of 1-3 weeks for test results. 
 
@@ -42,13 +55,14 @@ In addition to accuracy, we also wanted to explore whether or not a **simpler mo
 ![net2](markdown/net2.png)
 
 ## 3. Result
+
 |    Model     |  Training Dataset   | Training Time |  Loss  |  IoU   |
 |:------------:|:-------------------:|:-------------:|:------:|:------:|
 |    U-Net     | Nuclei--Kaggle 2018 |     75min     | 0.0783 | 0.8464 |
 |  FusionNet   | Nuclei--Kaggle 2018 |    125min     | 0.0807 | 0.8456 |
 | Dialeted CNN | Nuclei--Kaggle 2018 |    375min     | 0.1437 | 0.7938 |
 * **Table1: Cell Segmentation Part Experiment Results**
----
+***
 | Architecture | Accuracy |
 |:------------:|:--------:|
 |   Baseline   |  78.4%   |
@@ -56,14 +70,14 @@ In addition to accuracy, we also wanted to explore whether or not a **simpler mo
 |   Alexnet    |  76.8%   |
 |    Resnet    |  92.4%   |
 * **Table2: Basic Pretrained Classification Results**
----
+***
 |            Ablation Study Feature            | Accuracy |
 |:--------------------------------------------:|:--------:|
 |               3x3 Conv Filters               |   90%    |
 |                Dropout layers                |   88%    |
 | Truncated model with 3x3 filters and dropout |   85%    |
 * **Table3: Ablation Study Feature**
----
+***
 * **Result Picture**
 
 ![result](markdown/result.png)
